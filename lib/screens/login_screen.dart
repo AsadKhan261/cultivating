@@ -1,3 +1,4 @@
+import 'package:cultivating/screens/home_screen.dart';
 import 'package:cultivating/screens/register_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -71,17 +72,23 @@ class LoginScreen extends StatelessWidget {
             const SizedBox(
               height: 20,
             ),
-            Container(
-              height: 50,
-              width: MediaQuery.of(context).size.width / 2,
-              decoration: BoxDecoration(
-                color: Colors.blue,
-                borderRadius: BorderRadius.circular(12),
-              ),
-              child: const Center(
-                child: Text(
-                  'Login',
-                  style: TextStyle(color: Colors.white, fontSize: 18),
+            InkWell(
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => HomeScreen()));
+              },
+              child: Container(
+                height: 50,
+                width: MediaQuery.of(context).size.width / 2,
+                decoration: BoxDecoration(
+                  color: Colors.blue,
+                  borderRadius: BorderRadius.circular(12),
+                ),
+                child: const Center(
+                  child: Text(
+                    'Login',
+                    style: TextStyle(color: Colors.white, fontSize: 18),
+                  ),
                 ),
               ),
             ),
